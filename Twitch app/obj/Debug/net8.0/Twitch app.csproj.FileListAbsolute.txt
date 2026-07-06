@@ -1,0 +1,34 @@
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\Twitch app.GeneratedMSBuildEditorConfig.editorconfig
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\Twitch app.AssemblyInfoInputs.cache
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\Twitch app.AssemblyInfo.cs
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\Twitch app.csproj.CoreCompileInputs.cache
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\Twitch app.MvcApplicationPartsAssemblyInfo.cache
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\Twitch app.RazorAssemblyInfo.cache
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\Twitch app.RazorAssemblyInfo.cs
+D:\c++ projects\Twitch app\Twitch app\bin\Debug\net8.0\appsettings.Development.json
+D:\c++ projects\Twitch app\Twitch app\bin\Debug\net8.0\appsettings.json
+D:\c++ projects\Twitch app\Twitch app\bin\Debug\net8.0\Twitch app.staticwebassets.runtime.json
+D:\c++ projects\Twitch app\Twitch app\bin\Debug\net8.0\Twitch app.exe
+D:\c++ projects\Twitch app\Twitch app\bin\Debug\net8.0\Twitch app.deps.json
+D:\c++ projects\Twitch app\Twitch app\bin\Debug\net8.0\Twitch app.runtimeconfig.json
+D:\c++ projects\Twitch app\Twitch app\bin\Debug\net8.0\Twitch app.dll
+D:\c++ projects\Twitch app\Twitch app\bin\Debug\net8.0\Twitch app.pdb
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\staticwebassets.build.json
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\staticwebassets.development.json
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\scopedcss\bundle\Twitch app.styles.css
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\scopedcss\projectbundle\Twitch app.bundle.scp.css
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\Twitch app.dll
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\refint\Twitch app.dll
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\Twitch app.pdb
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\Twitch app.genruntimeconfig.cache
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\ref\Twitch app.dll
+D:\c++ projects\Twitch app\Twitch app\bin\Debug\net8.0\Twitch app.staticwebassets.endpoints.json
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\swae.build.ex.cache
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

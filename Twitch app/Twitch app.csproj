@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Twitch_app</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Twitch starting code\.vs\ProjectSettings.json" />
+    <Content Include="Twitch starting code\.vs\Twitch starting code.slnx\v18\DocumentLayout.json" />
+    <Content Include="Twitch starting code\.vs\VSWorkspaceState.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Twitch starting code\.vs\slnx.sqlite" />
+    <None Include="Twitch starting code\.vs\Twitch starting code.slnx\FileContentIndex\c4e732e5-7e6a-457c-960d-cb039886abec.vsidx" />
+  </ItemGroup>
+
+</Project>
