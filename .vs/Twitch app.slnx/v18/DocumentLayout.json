@@ -11,28 +11,8 @@
       "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\wwwroot\\js\\config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\wwwroot\\js\\config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\twitch starting code\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\twitch starting code\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\twitch app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\twitch app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -57,16 +37,20 @@
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "config.js",
-              "DocumentMoniker": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\wwwroot\\js\\config.js",
-              "RelativeDocumentMoniker": "Twitch app\\wwwroot\\js\\config.js",
-              "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\wwwroot\\js\\config.js",
-              "RelativeToolTip": "Twitch app\\wwwroot\\js\\config.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-07-06T11:36:37.203Z",
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Twitch app\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Twitch app\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-07-08T19:38:50.867Z",
               "EditorCaption": ""
             },
             {
@@ -77,73 +61,10 @@
               "RelativeDocumentMoniker": "Twitch app\\Pages\\Index.cshtml",
               "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\Pages\\Index.cshtml",
               "RelativeToolTip": "Twitch app\\Pages\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-07-06T11:24:31.588Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\Pages\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "Twitch app\\Pages\\Privacy.cshtml",
-              "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\Pages\\Privacy.cshtml",
-              "RelativeToolTip": "Twitch app\\Pages\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-06T11:24:08.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "README.md",
-              "DocumentMoniker": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\Twitch starting code\\README.md",
-              "RelativeDocumentMoniker": "Twitch app\\Twitch starting code\\README.md",
-              "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\Twitch starting code\\README.md",
-              "RelativeToolTip": "Twitch app\\Twitch starting code\\README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-07-06T10:44:50.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Twitch app\\Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Twitch app\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-05T14:33:45.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\Program.cs",
-              "RelativeDocumentMoniker": "Twitch app\\Program.cs",
-              "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\Program.cs",
-              "RelativeToolTip": "Twitch app\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T12:07:36.859Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Twitch app.csproj",
-              "DocumentMoniker": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\Twitch app.csproj",
-              "RelativeDocumentMoniker": "Twitch app\\Twitch app.csproj",
-              "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\Twitch app.csproj",
-              "RelativeToolTip": "Twitch app\\Twitch app.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-07-02T10:45:15.291Z"
             }
           ]
         }
@@ -153,36 +74,7 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "86e77445-a00c-4855-9909-f62479efffc8",
-        "Display": 0,
-        "X": 765,
-        "Y": 2,
-        "Width": 774,
-        "Height": 818,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "2ed3379a-4379-450c-b90a-a431e598ace1",
+        "Id": "dd6ab7a5-da34-4240-9283-5ba70f52e86a",
         "Display": 0,
         "X": -3,
         "Y": 2,
@@ -203,9 +95,9 @@
               "RelativeDocumentMoniker": "Twitch app\\wwwroot\\js\\site.js",
               "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\wwwroot\\js\\site.js",
               "RelativeToolTip": "Twitch app\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwB4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-07-02T11:22:56.253Z",
+              "WhenOpened": "2026-07-08T17:52:16.345Z",
               "EditorCaption": ""
             }
           ]

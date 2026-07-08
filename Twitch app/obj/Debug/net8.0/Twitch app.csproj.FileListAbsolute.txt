@@ -32,3 +32,4 @@ D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\staticwebassets.build.jso
 D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\swae.build.ex.cache
 D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\c++ projects\Twitch app\Twitch app\obj\Debug\net8.0\Twitch app.sourcelink.json

@@ -8,14 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Twitch starting code\.vs\ProjectSettings.json" />
-    <Content Include="Twitch starting code\.vs\Twitch starting code.slnx\v18\DocumentLayout.json" />
-    <Content Include="Twitch starting code\.vs\VSWorkspaceState.json" />
+    <Compile Remove="Twitch starting code\**" />
+    <Compile Remove="wwwroot\html\**" />
+    <Content Remove="Twitch starting code\**" />
+    <Content Remove="wwwroot\html\**" />
+    <EmbeddedResource Remove="Twitch starting code\**" />
+    <EmbeddedResource Remove="wwwroot\html\**" />
+    <None Remove="Twitch starting code\**" />
+    <None Remove="wwwroot\html\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Twitch starting code\.vs\slnx.sqlite" />
-    <None Include="Twitch starting code\.vs\Twitch starting code.slnx\FileContentIndex\c4e732e5-7e6a-457c-960d-cb039886abec.vsidx" />
+    <Content Remove="wwwroot\js\backend.js" />
+    <Content Remove="wwwroot\js\common.js" />
+    <Content Remove="wwwroot\js\config.js" />
+    <Content Remove="wwwroot\js\live_config.js" />
+    <Content Remove="wwwroot\js\viewer.js" />
   </ItemGroup>
 
 </Project>

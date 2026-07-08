@@ -1,13 +1,5 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
-wwwroot\html\config.html
-wwwroot\html\live_config.html
-wwwroot\html\panel.html
-wwwroot\js\backend.js
-wwwroot\js\common.js
-wwwroot\js\config.js
-wwwroot\js\live_config.js
-wwwroot\js\viewer.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
