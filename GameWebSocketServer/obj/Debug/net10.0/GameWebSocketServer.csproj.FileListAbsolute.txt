@@ -1,0 +1,15 @@
+D:\c++ projects\Twitch app\GameWebSocketServer\bin\Debug\net10.0\GameWebSocketServer.exe
+D:\c++ projects\Twitch app\GameWebSocketServer\bin\Debug\net10.0\GameWebSocketServer.deps.json
+D:\c++ projects\Twitch app\GameWebSocketServer\bin\Debug\net10.0\GameWebSocketServer.runtimeconfig.json
+D:\c++ projects\Twitch app\GameWebSocketServer\bin\Debug\net10.0\GameWebSocketServer.dll
+D:\c++ projects\Twitch app\GameWebSocketServer\bin\Debug\net10.0\GameWebSocketServer.pdb
+D:\c++ projects\Twitch app\GameWebSocketServer\obj\Debug\net10.0\GameWebSocketServer.GeneratedMSBuildEditorConfig.editorconfig
+D:\c++ projects\Twitch app\GameWebSocketServer\obj\Debug\net10.0\GameWebSocketServer.AssemblyInfoInputs.cache
+D:\c++ projects\Twitch app\GameWebSocketServer\obj\Debug\net10.0\GameWebSocketServer.AssemblyInfo.cs
+D:\c++ projects\Twitch app\GameWebSocketServer\obj\Debug\net10.0\GameWebSocketServer.csproj.CoreCompileInputs.cache
+D:\c++ projects\Twitch app\GameWebSocketServer\obj\Debug\net10.0\GameWebSocketServer.sourcelink.json
+D:\c++ projects\Twitch app\GameWebSocketServer\obj\Debug\net10.0\GameWebSocketServer.dll
+D:\c++ projects\Twitch app\GameWebSocketServer\obj\Debug\net10.0\refint\GameWebSocketServer.dll
+D:\c++ projects\Twitch app\GameWebSocketServer\obj\Debug\net10.0\GameWebSocketServer.pdb
+D:\c++ projects\Twitch app\GameWebSocketServer\obj\Debug\net10.0\GameWebSocketServer.genruntimeconfig.cache
+D:\c++ projects\Twitch app\GameWebSocketServer\obj\Debug\net10.0\ref\GameWebSocketServer.dll
