@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\c\u002B\u002B projects\\Twitch app\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,18 +45,14 @@
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Twitch app\\Pages\\Index.cshtml",
               "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\Pages\\Index.cshtml",
               "RelativeToolTip": "Twitch app\\Pages\\Index.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAgwBAAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-07-06T11:24:31.588Z",
               "EditorCaption": ""
@@ -71,8 +67,7 @@
               "RelativeToolTip": "Twitch app\\wwwroot\\css\\site.css",
               "ViewState": "AgIAAAgAAAAAAAAAAAAiwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-07-08T19:38:50.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T19:38:50.867Z"
             }
           ]
         }
@@ -86,7 +81,7 @@
         "Display": 0,
         "X": -3,
         "Y": 2,
-        "Width": 1542,
+        "Width": 774,
         "Height": 818,
         "WindowState": 0
       },
@@ -97,13 +92,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "site.js",
               "DocumentMoniker": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "Twitch app\\wwwroot\\js\\site.js",
               "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\wwwroot\\js\\site.js",
               "RelativeToolTip": "Twitch app\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAYwHAAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAJMAAAAASz0LQgUnwKkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-07-11T14:16:42.121Z",
               "EditorCaption": ""
