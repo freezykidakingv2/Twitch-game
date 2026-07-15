@@ -26,4 +26,8 @@
     <Content Remove="wwwroot\js\viewer.js" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\js\BodyPartPositions.js" />
+  </ItemGroup>
+
 </Project>
