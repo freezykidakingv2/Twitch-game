@@ -6,19 +6,11 @@ const ctx = canvas.getContext("2d")
 let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 let pixel = imageData.data;
 
-WebSocketMessages.testing();
-
-WebSocketMessages.test = "it works";
-
-console.log(WebSocketMessages.test);
-
-console.log("Body part count: ", bodyPartsPos.length);
-console.log("Body x position: ", bodyPartsPos[5]);
-
 function LoadCharacter(height, sides, bodyXP, bodyYP, legsXP, legsYP) {
      
-    for (const bodyPart in bodyPartsPos) {
-        if (bodyPart > 900 && bodyPart != bodyPartsPos[4]) {
+    for (let bodyPart in bodyPartsPos) {
+        if (bodyPart > 900 && bodyPart != bodyPartsPos[4] &&
+            bodyPart != bodyPartsPos[3] && bodyPart != bodyPartsPos[5]) {
             console.log("Error: Body at a high position");
             bodyPart = 300;
             console.log("Legs y position: ", bodyPartsPos[4]);
@@ -26,6 +18,9 @@ function LoadCharacter(height, sides, bodyXP, bodyYP, legsXP, legsYP) {
         else if (bodyPart == bodyPartsPos[4] && (bodyPart < 500 || bodyPart > 850)) {
             bodyPart = 850;
             console.log("Leg fixed");
+        }
+        else if (bodyPart > 1920 && (bodyPart == bodyPartsPos[3] || bodyPart == bodyPartsPos[5])) {
+            bodyPart = 1920;
         }
         else {
             console.log("We good");
@@ -54,7 +49,6 @@ function LoadCharacter(height, sides, bodyXP, bodyYP, legsXP, legsYP) {
     ctx.fillRect(0, 0, 90, 20);
     ctx.restore();
 
-    console.log(bodyPartsPos[2]);
     console.log(bodyPartsPos[3], bodyPartsPos[4], "leg");
 }
 
@@ -97,7 +91,7 @@ function LoadObstacles() {
 }
 
 LoadObstacles();
-imageData = ctx.getImageData(0, 1080, 1920, 1080);
+imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
 var count = 0;
 
