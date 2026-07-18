@@ -1,5 +1,6 @@
 ﻿let websocket = new WebSocket("ws://localhost:8080");
 import { bodyPartsPos } from "./BodyPartPositions.js";
+import { LoadCharacter, LoadObstacles, ctx } from "./site.js";
 
 export class WebSocketMessages {
     static sendPosition() {
@@ -22,9 +23,9 @@ function initializeWebSocketListeners(websocket) {
         console.log("CONNECTED");
     });
 
-    WebSocketMessages.sendPosition();
+    websocket.addEventListener("message", (e) => {
+        console.log("OBS: Message Recieved");
 
-    websocket.addEventListener("message", (event) => {
         if (event.data == null || event.data == " ") {
             console.log("Empty message received: ", event.data);
             return;
@@ -42,7 +43,7 @@ function initializeWebSocketListeners(websocket) {
             bodyPartsPos[3] = player.lx;
             bodyPartsPos[4] = player.ly;
 
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.clearRect(0, 0, 1920, 1080);
             LoadObstacles();
             LoadCharacter(bodyPartsPos[0], bodyPartsPos[1], bodyPartsPos[5],
                 bodyPartsPos[6], bodyPartsPos[3], bodyPartsPos[4]);
@@ -50,12 +51,8 @@ function initializeWebSocketListeners(websocket) {
         catch (error) {
             console.log("Not JSON: ", error);
         }
-    });
+    })
 
-    websocket.addEventListener("error", (e) => {
-        console.log(`ERROR`);
-    });
-    
     websocket.addEventListener("close", (e) => {
         console.log("DISCONNECTED");
     

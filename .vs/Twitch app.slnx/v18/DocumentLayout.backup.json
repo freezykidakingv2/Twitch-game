@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\c\u002B\u002B projects\\Twitch app\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\wwwroot\\js\\websocket.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\wwwroot\\js\\websocket.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\wwwroot\\js\\bodypartpositions.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\wwwroot\\js\\bodypartpositions.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|solutionrelative:twitch app\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90D3E69B-66B4-74BF-6B4B-524866D0A154}|Twitch app\\Twitch app.csproj|d:\\c\u002B\u002B projects\\twitch app\\twitch app\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,24 +38,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BodyPartPositions.js",
               "DocumentMoniker": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\wwwroot\\js\\BodyPartPositions.js",
               "RelativeDocumentMoniker": "Twitch app\\wwwroot\\js\\BodyPartPositions.js",
               "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\wwwroot\\js\\BodyPartPositions.js",
               "RelativeToolTip": "Twitch app\\wwwroot\\js\\BodyPartPositions.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-07-15T17:18:55.777Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{6d4078d1-5951-4ed1-ac0e-0a8099c1cce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
@@ -65,9 +57,18 @@
               "RelativeDocumentMoniker": "Twitch app\\Pages\\Index.cshtml",
               "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\Pages\\Index.cshtml",
               "RelativeToolTip": "Twitch app\\Pages\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-15T17:14:21.684Z"
+              "WhenOpened": "2026-07-15T17:14:21.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6d4078d1-5951-4ed1-ac0e-0a8099c1cce5}"
             },
             {
               "$type": "Document",
@@ -104,13 +105,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "site.js",
               "DocumentMoniker": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "Twitch app\\wwwroot\\js\\site.js",
               "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\wwwroot\\js\\site.js",
               "RelativeToolTip": "Twitch app\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAwFoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-07-11T14:16:42.121Z",
               "EditorCaption": ""
@@ -138,13 +139,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "WebSocket.js",
               "DocumentMoniker": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\wwwroot\\js\\WebSocket.js",
               "RelativeDocumentMoniker": "Twitch app\\wwwroot\\js\\WebSocket.js",
               "ToolTip": "D:\\c\u002B\u002B projects\\Twitch app\\Twitch app\\wwwroot\\js\\WebSocket.js",
               "RelativeToolTip": "Twitch app\\wwwroot\\js\\WebSocket.js",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBgAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-07-16T16:06:39.967Z",
               "EditorCaption": ""

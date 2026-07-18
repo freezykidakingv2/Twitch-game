@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameWebSocketServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+034a3082fdc12e7526ce1496f3014c2b5bb4bc7a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e138fcee4f74f136e2e3a12518f2696254a26afc")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameWebSocketServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameWebSocketServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
