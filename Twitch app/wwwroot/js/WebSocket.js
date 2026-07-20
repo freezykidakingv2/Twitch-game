@@ -1,6 +1,7 @@
 ﻿let websocket = new WebSocket("ws://localhost:8080");
 import { bodyPartsPos } from "./BodyPartPositions.js";
-import { LoadCharacter, LoadObstacles, ctx } from "./site.js";
+import { LoadCharacter, LoadObstacles, ctx, boundaryX, boundaryY, setBoundaryPs } from "./Drawings.js";
+import { run, increment } from "./site.js";
 
 export class WebSocketMessages {
     static sendPosition() {
@@ -12,7 +13,9 @@ export class WebSocketMessages {
                 by: bodyPartsPos[6],
                 lx: bodyPartsPos[3],
                 ly: bodyPartsPos[4],
-                rotation: bodyPartsPos[2]
+                rotation: bodyPartsPos[2],
+                bdryX: boundaryX,
+                bdryY: boundaryY
             }));
         }
     }
@@ -21,10 +24,12 @@ export class WebSocketMessages {
 function initializeWebSocketListeners(websocket) {
     websocket.addEventListener("open", () => {
         console.log("CONNECTED");
+        run();
     });
 
     websocket.addEventListener("message", (e) => {
         console.log("OBS: Message Recieved");
+        setBoundaryPs(increment, false);
 
         if (event.data == null || event.data == " ") {
             console.log("Empty message received: ", event.data);
@@ -42,11 +47,13 @@ function initializeWebSocketListeners(websocket) {
             bodyPartsPos[6] = player.by;
             bodyPartsPos[3] = player.lx;
             bodyPartsPos[4] = player.ly;
+            setBoundaryPs(boundaryX, player.bdryX);
+            setBoundaryPs(boundaryY, player.bdryY);
 
             ctx.clearRect(0, 0, 1920, 1080);
             LoadObstacles();
             LoadCharacter(bodyPartsPos[0], bodyPartsPos[1], bodyPartsPos[5],
-                bodyPartsPos[6], bodyPartsPos[3], bodyPartsPos[4]);
+                bodyPartsPos[6], bodyPartsPos[3], bodyPartsPos[4], boundaryX, boundaryY);
         }
         catch (error) {
             console.log("Not JSON: ", error);
