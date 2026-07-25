@@ -1,15 +1,18 @@
 ﻿import { WebSocketMessages } from "./WebSocket.js";
 import { bodyPartsPos } from "./BodyPartPositions.js";
-import { LoadCharacter, LoadObstacles, ctx, boundaryX, boundaryY, setBoundaryPs } from "./Drawings.js";
+import { LoadCharacter, LoadObstacles, ctx, boundaryX, boundaryY, setBoundaryPs, boundaryH, boundaryW } from "./Drawings.js";
 
 LoadObstacles();
 let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 let pixel = imageData.data;
 export let increment = false;
 let blockColour = 0;
-let increase = false;
+export let increase = false;
+export let isX = false;
 
 export function run () {
+
+    WebSocketMessages.sendPosition();
 
     LoadCharacter(bodyPartsPos[0], bodyPartsPos[1], bodyPartsPos[5],
         bodyPartsPos[6], bodyPartsPos[3], bodyPartsPos[4], boundaryX, boundaryY);
@@ -24,19 +27,16 @@ export function run () {
             }
 
             Yposition++;
+            setBoundaryPs(1, true, true, false);
 
             console.log("Decreasing: ", Yposition);
-            ctx.clearRect(0, 0, 1920, 1080);
+            console.log("Boundary Y position: ", boundaryY);
+            ctx.clearRect(boundaryX, boundaryY, boundaryW, boundaryH);
             LoadObstacles();
-            LoadCharacter(bodyPartsPos[0], bodyPartsPos[1], bodyPartsPos[5],
-                bodyPartsPos[6], bodyPartsPos[3], bodyPartsPos[4]);
+            LoadCharacter();
             WebSocketMessages.sendPosition();
         }
     }
-
-    fall(bodyPartsPos[0]);
-    fall(bodyPartsPos[4]);
-    fall(bodyPartsPos[6]);
 
     function collision(positionX, positionY, positionC, increase) {
         blockColour = (((positionY * canvas.width + positionX) * 4));
@@ -56,99 +56,65 @@ export function run () {
         return positionC;
     }
 
-    fall(bodyPartsPos[0]);
-    fall(bodyPartsPos[4]);
-    fall(bodyPartsPos[6]);
-
     var count = 0;
 
     document.addEventListener("keydown", (event) => {
         if (event.key == " ") {
+            increase = false;
+            increment = true;
+            isX = false;
+
             for (let i = 5; i <= 350; i) {
                 bodyPartsPos[0] -= i;
                 bodyPartsPos[6] -= i;
                 bodyPartsPos[4] -= i;
-                boundaryY -= i;
+                setBoundaryPs(i, increment, increase, isX);
 
                 console.log("Count: ", count);
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.clearRect(boundaryX, boundaryY, boundaryW, boundaryH);
                 LoadObstacles();
-                LoadCharacter(bodyPartsPos[0], bodyPartsPos[1], bodyPartsPos[5],
-                    bodyPartsPos[6], bodyPartsPos[3], bodyPartsPos[4]);
+                LoadCharacter();
                 WebSocketMessages.sendPosition();
+
                 count += 5;
                 if (count >= 350) {
                     break;
                 }
             }
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.clearRect(boundaryX, boundaryY, boundaryW, boundaryH);
             LoadObstacles();
             LoadCharacter(bodyPartsPos[0], bodyPartsPos[1], bodyPartsPos[5],
                 bodyPartsPos[6], bodyPartsPos[3], bodyPartsPos[4]);
-            WebSocketMessages.sendPosition();
-
-            fall(bodyPartsPos[0]);
-            fall(bodyPartsPos[4]);
-            fall(bodyPartsPos[6]);
 
             WebSocketMessages.sendPosition();
             count = 0;
             increase = false;
             setTimeout(() => {
-                for (let i = 5; i <= 350; i) {
-                    bodyPartsPos[0] = collision(bodyPartsPos[1],
-                        bodyPartsPos[0] += i,
-                        bodyPartsPos[0] += i, increase);
-
-                    bodyPartsPos[6] = collision(bodyPartsPos[6],
-                        bodyPartsPos[6] += i,
-                        bodyPartsPos[6] += i, increase);
-
-                    bodyPartsPos[4] = collision(bodyPartsPos[3],
-                        bodyPartsPos[4] += i,
-                        bodyPartsPos[4] += i, increase);
-
-                    console.log(count);
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    LoadObstacles();
-                    LoadCharacter(bodyPartsPos[0], bodyPartsPos[1], bodyPartsPos[5],
-                        bodyPartsPos[6], bodyPartsPos[3], bodyPartsPos[4]);
-                    WebSocketMessages.sendPosition();
-
-                    count += 5;
-                    if (count >= 350) {
-                        break;
-                    }
-                }
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                LoadObstacles();
-                LoadCharacter(bodyPartsPos[0], bodyPartsPos[1], bodyPartsPos[5],
-                    bodyPartsPos[6], bodyPartsPos[3], bodyPartsPos[4]);
-                WebSocketMessages.sendPosition();
-
                 fall(bodyPartsPos[0]);
                 fall(bodyPartsPos[4]);
                 fall(bodyPartsPos[6]);
-
-                WebSocketMessages.sendPosition();
             }, 1500);
+
         }
         else if (event.key == "d") {
-            increase = false;
+            fall(bodyPartsPos[0]);
+            fall(bodyPartsPos[4]);
+            fall(bodyPartsPos[6]);
+
+            increase = true;
             increment = true;
+            isX = true;
 
             for (let i = 1; i <= 5; i += 2) {
                 bodyPartsPos[i] = collision(bodyPartsPos[i] += 150,
                     bodyPartsPos[i - 1],
                     bodyPartsPos[i] += 150, increase);
-                setBoundaryPs(boundaryX, 150, increment, increase);
+                setBoundaryPs(150, increment, increase, isX);
+                console.log("Boundary X position: ", boundaryX);
 
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.clearRect(boundaryX, boundaryY, boundaryW, boundaryH);
                 LoadObstacles();
-                LoadCharacter(bodyPartsPos[0], bodyPartsPos[1], bodyPartsPos[5],
-                    bodyPartsPos[6], bodyPartsPos[3], bodyPartsPos[4], boundaryX, boundaryY);
-
-                WebSocketMessages.sendPosition();
+                LoadCharacter();
 
                 fall(bodyPartsPos[0]);
                 fall(bodyPartsPos[4]);
@@ -158,42 +124,43 @@ export function run () {
             }
             console.log("Head x position: ", bodyPartsPos[1]);
 
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            console.log(boundaryX - 20);
+            ctx.clearRect(boundaryX, boundaryY, boundaryW, boundaryH);
             LoadObstacles();
-            LoadCharacter(bodyPartsPos[0], bodyPartsPos[1], bodyPartsPos[5],
-                bodyPartsPos[6], bodyPartsPos[3], bodyPartsPos[4], boundaryX, boundaryY);
-
-            WebSocketMessages.sendPosition();
-
-            fall(bodyPartsPos[0]);
-            fall(bodyPartsPos[4]);
-            fall(bodyPartsPos[6]);
+            LoadCharacter();
 
             WebSocketMessages.sendPosition();
         }
         else if (event.key == "a") {
-            increase = true;
-            increment = true;
-            for (let i = 1; i <= 5; i += 2) {
-                bodyPartsPos[i] = collision(bodyPartsPos[i] -= 150,
-                    bodyPartsPos[i - 1],
-                    bodyPartsPos[i] -= 150, increase);
-
-                setBoundaryPs(boundaryX, 150, increment, increase);
-            }
-            console.log("Head x position: ", bodyPartsPos[1]);
-
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            LoadObstacles();
-            LoadCharacter(bodyPartsPos[0], bodyPartsPos[1], bodyPartsPos[5],
-                bodyPartsPos[6], bodyPartsPos[3], bodyPartsPos[4], boundaryX, boundaryY);
-
-            WebSocketMessages.sendPosition();
-
             fall(bodyPartsPos[0]);
             fall(bodyPartsPos[4]);
             fall(bodyPartsPos[6]);
 
+            increase = false;
+            increment = true;
+            isX = true;
+
+            for (let i = 1; i <= 5; i += 2) {
+                bodyPartsPos[i] = collision(bodyPartsPos[i] -= 150,
+                    bodyPartsPos[i - 1],
+                    bodyPartsPos[i] -= 150, increase);
+                setBoundaryPs(150, increment, increase, isX);
+
+                ctx.clearRect(boundaryX, boundaryY, boundaryW, boundaryH);
+                LoadObstacles();
+                LoadCharacter();
+                WebSocketMessages.sendPosition();
+
+                fall(bodyPartsPos[0]);
+                fall(bodyPartsPos[4]);
+                fall(bodyPartsPos[6]);
+
+            }
+            console.log("Head x position: ", bodyPartsPos[1]);
+
+            ctx.clearRect(boundaryX, boundaryY, boundaryW, boundaryH);
+            LoadObstacles();
+            LoadCharacter();
             WebSocketMessages.sendPosition();
         }
     });

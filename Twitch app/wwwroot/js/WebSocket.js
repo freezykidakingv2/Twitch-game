@@ -1,7 +1,7 @@
 ﻿let websocket = new WebSocket("ws://localhost:8080");
 import { bodyPartsPos } from "./BodyPartPositions.js";
-import { LoadCharacter, LoadObstacles, ctx, boundaryX, boundaryY, setBoundaryPs } from "./Drawings.js";
-import { run, increment } from "./site.js";
+import { LoadCharacter, LoadObstacles, ctx, boundaryX, boundaryY, setBoundaryPs, boundaryH, boundaryW } from "./Drawings.js";
+import { run, increment, isX, increase } from "./site.js";
 
 export class WebSocketMessages {
     static sendPosition() {
@@ -21,6 +21,10 @@ export class WebSocketMessages {
     }
 }
 
+export let ISwebsocketBX = false;
+let websocketBoundaryX = boundaryX;
+let websocketBoundaryY = boundaryY;
+
 function initializeWebSocketListeners(websocket) {
     websocket.addEventListener("open", () => {
         console.log("CONNECTED");
@@ -29,12 +33,15 @@ function initializeWebSocketListeners(websocket) {
 
     websocket.addEventListener("message", (e) => {
         console.log("OBS: Message Recieved");
-        setBoundaryPs(increment, false);
 
         if (event.data == null || event.data == " ") {
             console.log("Empty message received: ", event.data);
             return;
         }
+
+        websocketBoundaryX = boundaryX;
+        console.log(websocketBoundaryX);
+        websocketBoundaryY = boundaryY;
 
         try {
 
@@ -47,13 +54,12 @@ function initializeWebSocketListeners(websocket) {
             bodyPartsPos[6] = player.by;
             bodyPartsPos[3] = player.lx;
             bodyPartsPos[4] = player.ly;
-            setBoundaryPs(boundaryX, player.bdryX);
-            setBoundaryPs(boundaryY, player.bdryY);
+            websocketBoundaryX = player.bdryX;
+            websocketBoundaryY = player.bdryY;
 
-            ctx.clearRect(0, 0, 1920, 1080);
+            ctx.clearRect(boundaryX, boundaryY, boundaryW, boundaryH);
             LoadObstacles();
-            LoadCharacter(bodyPartsPos[0], bodyPartsPos[1], bodyPartsPos[5],
-                bodyPartsPos[6], bodyPartsPos[3], bodyPartsPos[4], boundaryX, boundaryY);
+            LoadCharacter();
         }
         catch (error) {
             console.log("Not JSON: ", error);

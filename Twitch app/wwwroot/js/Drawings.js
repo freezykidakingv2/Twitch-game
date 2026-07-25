@@ -5,26 +5,45 @@ export const ctx = canvas.getContext("2d");
 
 export let boundaryX = 200;
 export let boundaryY = 820;
+export let boundaryW = 120;
+export let boundaryH = 220;
 
-export function setBoundaryPs(position, value, incrementP, increaseP) {
-    if (incrementP == true) {
-        if (increaseP == true) {
-            position += value;
+export function setBoundaryPs(value, incrementP, increaseP, isXP) {
+    if (isXP == true) {
+        if (incrementP == true) {
+            if (increaseP == true) {
+                boundaryX += value;
+                console.log("boundary X position: ", boundaryX, "Adding: ", value);
+            }
+            else {
+                boundaryX -= value;
+            }
         }
         else {
-            position -= value;
+            boundaryX = value;
         }
     }
     else {
-        position = value;
+        if (incrementP == true) {
+            if (increaseP == true) {
+                boundaryY += value;
+            }
+            else {
+                boundaryY -= value;
+            }
+        }
+        else {
+            boundaryY = value;
+        }
     }
 }
 
-export function LoadCharacter(height, sides, bodyXP, bodyYP, legsXP, legsYP, boundaryX, boundaryY) {
+export function LoadCharacter() {
+    console.log("Boundary X position: ", boundaryX);
 
     ctx.lineWidth = "10";
     ctx.strokeStyle = "green";
-    ctx.strokeRect(boundaryX, boundaryY, 120, 220);
+    ctx.strokeRect(boundaryX, boundaryY, boundaryW, boundaryH);
 
     for (let i = 0; i < bodyPartsPos.length; i++) {
         if ((bodyPartsPos[i] > 1920 || bodyPartsPos[i] < 0) &&
@@ -52,12 +71,12 @@ export function LoadCharacter(height, sides, bodyXP, bodyYP, legsXP, legsYP, bou
     }
 
     ctx.beginPath();
-    ctx.arc(sides, height, 30, 0, Math.PI * 2)
+    ctx.arc(bodyPartsPos[1], bodyPartsPos[0], 30, 0, Math.PI * 2)
     ctx.fillStyle = "orange";
     ctx.fill();
 
     //body
-    ctx.fillRect(bodyXP, bodyYP, 20, 130);
+    ctx.fillRect(bodyPartsPos[5], bodyPartsPos[6], 20, 130);
 
     //first leg
     ctx.save();

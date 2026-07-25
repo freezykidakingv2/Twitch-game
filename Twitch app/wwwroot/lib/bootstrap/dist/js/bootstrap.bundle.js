@@ -2553,8 +2553,8 @@
   // clipping parents
 
 
-  function getClippingRect(element, boundary, rootBoundary, strategy) {
-    var mainClippingParents = boundary === 'clippingParents' ? getClippingParents(element) : [].concat(boundary);
+  function getClippingRect(element, boundaryY, rootBoundary, strategy) {
+    var mainClippingParents = boundaryY === 'clippingParents' ? getClippingParents(element) : [].concat(boundaryY);
     var clippingParents = [].concat(mainClippingParents, [rootBoundary]);
     var firstClippingParent = clippingParents[0];
     var clippingRect = clippingParents.reduce(function (accRect, clippingParent) {
@@ -2647,8 +2647,8 @@
         placement = _options$placement === void 0 ? state.placement : _options$placement,
         _options$strategy = _options.strategy,
         strategy = _options$strategy === void 0 ? state.strategy : _options$strategy,
-        _options$boundary = _options.boundary,
-        boundary = _options$boundary === void 0 ? clippingParents : _options$boundary,
+        _options$boundary = _options.boundaryY,
+        boundaryY = _options$boundary === void 0 ? clippingParents : _options$boundary,
         _options$rootBoundary = _options.rootBoundary,
         rootBoundary = _options$rootBoundary === void 0 ? viewport : _options$rootBoundary,
         _options$elementConte = _options.elementContext,
@@ -2661,7 +2661,7 @@
     var altContext = elementContext === popper ? reference : popper;
     var popperRect = state.rects.popper;
     var element = state.elements[altBoundary ? altContext : elementContext];
-    var clippingClientRect = getClippingRect(isElement(element) ? element : element.contextElement || getDocumentElement(state.elements.popper), boundary, rootBoundary, strategy);
+    var clippingClientRect = getClippingRect(isElement(element) ? element : element.contextElement || getDocumentElement(state.elements.popper), boundaryY, rootBoundary, strategy);
     var referenceClientRect = getBoundingClientRect(state.elements.reference);
     var popperOffsets = computeOffsets({
       reference: referenceClientRect,
@@ -2700,7 +2700,7 @@
 
     var _options = options,
         placement = _options.placement,
-        boundary = _options.boundary,
+        boundaryY = _options.boundaryY,
         rootBoundary = _options.rootBoundary,
         padding = _options.padding,
         flipVariations = _options.flipVariations,
@@ -2722,7 +2722,7 @@
     var overflows = allowedPlacements.reduce(function (acc, placement) {
       acc[placement] = detectOverflow(state, {
         placement: placement,
-        boundary: boundary,
+        boundaryY: boundaryY,
         rootBoundary: rootBoundary,
         padding: padding
       })[getBasePlacement(placement)];
@@ -2757,7 +2757,7 @@
         checkAltAxis = _options$altAxis === void 0 ? true : _options$altAxis,
         specifiedFallbackPlacements = options.fallbackPlacements,
         padding = options.padding,
-        boundary = options.boundary,
+        boundaryY = options.boundaryY,
         rootBoundary = options.rootBoundary,
         altBoundary = options.altBoundary,
         _options$flipVariatio = options.flipVariations,
@@ -2770,7 +2770,7 @@
     var placements = [preferredPlacement].concat(fallbackPlacements).reduce(function (acc, placement) {
       return acc.concat(getBasePlacement(placement) === auto ? computeAutoPlacement(state, {
         placement: placement,
-        boundary: boundary,
+        boundaryY: boundaryY,
         rootBoundary: rootBoundary,
         padding: padding,
         flipVariations: flipVariations,
@@ -2793,7 +2793,7 @@
       var len = isVertical ? 'width' : 'height';
       var overflow = detectOverflow(state, {
         placement: placement,
-        boundary: boundary,
+        boundaryY: boundaryY,
         rootBoundary: rootBoundary,
         altBoundary: altBoundary,
         padding: padding
@@ -3020,7 +3020,7 @@
         checkMainAxis = _options$mainAxis === void 0 ? true : _options$mainAxis,
         _options$altAxis = options.altAxis,
         checkAltAxis = _options$altAxis === void 0 ? false : _options$altAxis,
-        boundary = options.boundary,
+        boundaryY = options.boundaryY,
         rootBoundary = options.rootBoundary,
         altBoundary = options.altBoundary,
         padding = options.padding,
@@ -3029,7 +3029,7 @@
         _options$tetherOffset = options.tetherOffset,
         tetherOffset = _options$tetherOffset === void 0 ? 0 : _options$tetherOffset;
     var overflow = detectOverflow(state, {
-      boundary: boundary,
+      boundaryY: boundaryY,
       rootBoundary: rootBoundary,
       padding: padding,
       altBoundary: altBoundary
@@ -3085,7 +3085,7 @@
       var arrowPaddingMin = arrowPaddingObject[mainSide];
       var arrowPaddingMax = arrowPaddingObject[altSide]; // If the reference length is smaller than the arrow length, we don't want
       // to include its full size in the calculation. If the reference is small
-      // and near the edge of a boundary, the popper can overflow even if the
+      // and near the edge of a boundaryY, the popper can overflow even if the
       // reference is not overflowing as well (e.g. virtual elements with no
       // width or height)
 
@@ -3574,7 +3574,7 @@
   const PLACEMENT_BOTTOMCENTER = 'bottom';
   const Default$9 = {
     autoClose: true,
-    boundary: 'clippingParents',
+    boundaryY: 'clippingParents',
     display: 'dynamic',
     offset: [0, 2],
     popperConfig: null,
@@ -3582,7 +3582,7 @@
   };
   const DefaultType$9 = {
     autoClose: '(boolean|string)',
-    boundary: '(string|element)',
+    boundaryY: '(string|element)',
     display: 'string',
     offset: '(array|string|function)',
     popperConfig: '(null|object|function)',
@@ -3760,7 +3760,7 @@
         modifiers: [{
           name: 'preventOverflow',
           options: {
-            boundary: this._config.boundary
+            boundaryY: this._config.boundaryY
           }
         }, {
           name: 'offset',
@@ -5023,7 +5023,7 @@
   const Default$3 = {
     allowList: DefaultAllowlist,
     animation: true,
-    boundary: 'clippingParents',
+    boundaryY: 'clippingParents',
     container: false,
     customClass: '',
     delay: 0,
@@ -5042,7 +5042,7 @@
   const DefaultType$3 = {
     allowList: 'object',
     animation: 'boolean',
-    boundary: '(string|element)',
+    boundaryY: '(string|element)',
     container: '(string|element|boolean)',
     customClass: '(string|function)',
     delay: '(number|object)',
@@ -5318,7 +5318,7 @@
         }, {
           name: 'preventOverflow',
           options: {
-            boundary: this._config.boundary
+            boundaryY: this._config.boundaryY
           }
         }, {
           name: 'arrow',

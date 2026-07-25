@@ -1731,7 +1731,7 @@ const PLACEMENT_TOPCENTER = 'top';
 const PLACEMENT_BOTTOMCENTER = 'bottom';
 const Default$9 = {
   autoClose: true,
-  boundary: 'clippingParents',
+  boundaryY: 'clippingParents',
   display: 'dynamic',
   offset: [0, 2],
   popperConfig: null,
@@ -1739,7 +1739,7 @@ const Default$9 = {
 };
 const DefaultType$9 = {
   autoClose: '(boolean|string)',
-  boundary: '(string|element)',
+  boundaryY: '(string|element)',
   display: 'string',
   offset: '(array|string|function)',
   popperConfig: '(null|object|function)',
@@ -1917,7 +1917,7 @@ class Dropdown extends BaseComponent {
       modifiers: [{
         name: 'preventOverflow',
         options: {
-          boundary: this._config.boundary
+          boundaryY: this._config.boundaryY
         }
       }, {
         name: 'offset',
@@ -3180,7 +3180,7 @@ const AttachmentMap = {
 const Default$3 = {
   allowList: DefaultAllowlist,
   animation: true,
-  boundary: 'clippingParents',
+  boundaryY: 'clippingParents',
   container: false,
   customClass: '',
   delay: 0,
@@ -3199,7 +3199,7 @@ const Default$3 = {
 const DefaultType$3 = {
   allowList: 'object',
   animation: 'boolean',
-  boundary: '(string|element)',
+  boundaryY: '(string|element)',
   container: '(string|element|boolean)',
   customClass: '(string|function)',
   delay: '(number|object)',
@@ -3475,7 +3475,7 @@ class Tooltip extends BaseComponent {
       }, {
         name: 'preventOverflow',
         options: {
-          boundary: this._config.boundary
+          boundaryY: this._config.boundaryY
         }
       }, {
         name: 'arrow',
