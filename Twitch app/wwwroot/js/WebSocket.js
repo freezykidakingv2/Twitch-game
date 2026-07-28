@@ -1,7 +1,7 @@
 ﻿let websocket = new WebSocket("ws://localhost:8080");
 import { bodyPartsPos } from "./BodyPartPositions.js";
 import { LoadCharacter, LoadObstacles, ctx, boundaryX, boundaryY, setBoundaryPs, boundaryH, boundaryW } from "./Drawings.js";
-import { run, increment, isX, increase } from "./site.js";
+import { run } from "./site.js";
 
 export class WebSocketMessages {
     static sendPosition() {
@@ -58,7 +58,6 @@ function initializeWebSocketListeners(websocket) {
             websocketBoundaryY = player.bdryY;
 
             ctx.clearRect(boundaryX, boundaryY, boundaryW, boundaryH);
-            LoadObstacles();
             LoadCharacter();
         }
         catch (error) {
