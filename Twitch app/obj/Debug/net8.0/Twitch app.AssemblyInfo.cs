@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Twitch app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffc441e4a6a54f271459b73ba6fededa5e102c06")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbff80515c6af01f1c9ea3659d0913dc6ae86cd9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Twitch app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Twitch app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,29 +1,22 @@
 ﻿let websocket = new WebSocket("ws://localhost:8080");
 import { bodyPartsPos } from "./BodyPartPositions.js";
-import { LoadCharacter, LoadObstacles, ctx, boundaryX, boundaryY, setBoundaryPs, boundaryH, boundaryW } from "./Drawings.js";
+import { LoadCharacter, LoadObstacles, ctx, boundaryX, boundaryY, setBoundaryPs, boundaryH, boundaryW, dead, canvas } from "./Drawings.js";
 import { run } from "./site.js";
 
 export class WebSocketMessages {
     static sendPosition() {
         if (websocket.readyState === WebSocket.OPEN) {
             websocket.send(JSON.stringify({
-                x: bodyPartsPos[1],
-                y: bodyPartsPos[0],
-                bx: bodyPartsPos[5],
-                by: bodyPartsPos[6],
-                lx: bodyPartsPos[3],
-                ly: bodyPartsPos[4],
                 rotation: bodyPartsPos[2],
                 bdryX: boundaryX,
-                bdryY: boundaryY
+                bdryY: boundaryY,   
+                dd: dead
             }));
         }
     }
 }
 
 export let ISwebsocketBX = false;
-let websocketBoundaryX = boundaryX;
-let websocketBoundaryY = boundaryY;
 
 function initializeWebSocketListeners(websocket) {
     websocket.addEventListener("open", () => {
@@ -32,36 +25,33 @@ function initializeWebSocketListeners(websocket) {
     });
 
     websocket.addEventListener("message", (e) => {
-        console.log("OBS: Message Recieved");
-
-        if (event.data == null || event.data == " ") {
-            console.log("Empty message received: ", event.data);
+        if (dead == true) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
             return;
         }
+        else {
+            if (event.data == null || event.data == " ") {
+                console.log("Empty message received: ", event.data);
+                return;
+            }
 
-        websocketBoundaryX = boundaryX;
-        console.log(websocketBoundaryX);
-        websocketBoundaryY = boundaryY;
+            try {
 
-        try {
+                let player = JSON.parse(event.data);
 
-            let player = JSON.parse(event.data);
 
-            bodyPartsPos[1] = player.x;
-            bodyPartsPos[0] = player.y;
-            bodyPartsPos[2] = player.rotation;
-            bodyPartsPos[5] = player.bx;
-            bodyPartsPos[6] = player.by;
-            bodyPartsPos[3] = player.lx;
-            bodyPartsPos[4] = player.ly;
-            websocketBoundaryX = player.bdryX;
-            websocketBoundaryY = player.bdryY;
 
-            ctx.clearRect(boundaryX, boundaryY, boundaryW, boundaryH);
-            LoadCharacter();
-        }
-        catch (error) {
-            console.log("Not JSON: ", error);
+                ctx.clearRect(boundaryX, boundaryY, boundaryW, boundaryH);
+
+                setBoundaryPs(player.bdryX, false, false, true);
+                setBoundaryPs(player.bdryY, false, false, false);
+
+                ctx.clearRect(boundaryX, boundaryY, boundaryW, boundaryH);
+                LoadCharacter();
+            }
+            catch (error) {
+                console.log("Not JSON: ", error);
+            }
         }
     })
 

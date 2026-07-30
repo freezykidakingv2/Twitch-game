@@ -1,12 +1,13 @@
 ﻿import { bodyPartsPos } from "./BodyPartPositions.js";
 
-const canvas = document.getElementById("canvas");
+export const canvas = document.getElementById("canvas");
 export const ctx = canvas.getContext("2d");
 
 export let boundaryX = 200;
-export let boundaryY = 820;
+export let boundaryY = 800;
 export let boundaryW = 120;
 export let boundaryH = 220;
+export let dead = false;
 
 export function setBoundaryPs(value, incrementP, increaseP, isXP) {
 
@@ -27,6 +28,7 @@ export function setBoundaryPs(value, incrementP, increaseP, isXP) {
         }
         else {
             boundaryX = value;
+            console.log("Boundary X position initialized: ", boundaryX);
         }
     }
     else {
@@ -44,77 +46,65 @@ export function setBoundaryPs(value, incrementP, increaseP, isXP) {
         }
         else {
             boundaryY = value;
+            console.log("Boundary Y position initialized: ", boundaryY);
         }
     }
 }
 
 export function LoadCharacter() {
+    if (dead == true) {
+        dead = true;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        console.log("Dead");
+        return;
+    }
+
     // ctx.lineWidth = "10";
     // ctx.strokeStyle = "green";
     // ctx.strokeRect(boundaryX, boundaryY, boundaryW, boundaryH);
 
-    for (let bodyPart in bodyPartsPos) {
-        if (bodyPart < 0) {
-            bodyPart = 0;
-            console.log("Y position fixed: ", bodypart);
-        }
-        else if (bodyPart > 1920) {
-            bodyPart = 1920;
-            console.log("X position fixed:", bodyPart);
-        }
+    if (boundaryY < 0) {
+        boundaryY = 0;
+        console.log("Y position fixed: ", boundaryY);
+    }
+    else if (boundaryY >= 1080) {
+        boundaryY = 1080;
+        dead = true;
+        console.log("Dead", dead);
     }
 
-    if (bodyPartsPos[3] != bodyPartsPos[5] + 20) { 
-
-        bodyPartsPos[3] = bodyPartsPos[5] + 20;
-        console.log("Leg X position aligned with body X position");
+    if (boundaryX < 0) {
+        boundaryX = 0;
+        console.log("X position fixed: ", boundaryX);
     }
-    else if (bodyPartsPos[0] != bodyPartsPos[6]) {
-        bodyPartsPos[0] = bodyPartsPos[6];
-        console.log("Head Y position aligned with body Y position");
-    }
-    else if (bodyPartsPos[4] != bodyPartsPos[6] + 100) {
-        bodyPartsPos[4] = bodyPartsPos[6] + 100;
-    }
-    else if (bodyPartsPos[1] != bodyPartsPos[5] + 5) {
-
-        bodyPartsPos[1] = bodyPartsPos[5] + 5;
-    }
-    else if (boundaryX != bodyPartsPos[1] - 50) {
-        boundaryX = bodyPartsPos[1] - 50;
-        console.log("Boundary X position fixed: ", boundaryX);
-    }
-    else if (boundaryY != bodyPartsPos[0] - 30) {
-        boundaryY = bodyPartsPos[0] - 30;
-        console.log("Boundary X position fixed:",boundaryX);
-    }
-    else {
-        console.log("We good");
+    else if (boundaryX > 1920) {
+        boundaryX = 1920;
+        console.log("X position fixed:", boundaryX);
     }
 
     ctx.beginPath();
-    ctx.arc(bodyPartsPos[1], bodyPartsPos[0], 30, 0, Math.PI * 2)
+    ctx.arc(boundaryX + 50, boundaryY + 30, 30, 0, Math.PI * 2)
     ctx.fillStyle = "orange";
     ctx.fill();
 
     //body
-    ctx.fillRect(bodyPartsPos[5], bodyPartsPos[6], 20, 130);
+    ctx.fillRect(boundaryX + 45, boundaryY + 30, 20, 130);
 
     //first leg
     ctx.save();
-    ctx.translate(bodyPartsPos[3], bodyPartsPos[4]);
+    ctx.translate(boundaryX + 65, boundaryY + 130);
     ctx.rotate(Math.PI / 1.7);
     ctx.fillRect(0, 0, 90, 20);
     ctx.restore();
 
     //second leg
     ctx.save();
-    ctx.translate(bodyPartsPos[3], bodyPartsPos[4]);
+    ctx.translate(boundaryX + 65, boundaryY + 130);
     ctx.rotate(bodyPartsPos[2]);
     ctx.fillRect(0, 0, 90, 20);
     ctx.restore();
 
-    console.log(bodyPartsPos[3], bodyPartsPos[4], "leg");
+    console.log(boundaryX + 65, boundaryY + 130, "leg");
 }
 
 var j = 1170;
@@ -125,4 +115,10 @@ export function LoadObstacles() {
     for (let i = 200; i <= 1700; i += 400) {
         ctx.fillRect(i, j -= 150, 160, 50);
     }
+
+    ctx.fillRect(1750, 400, 160, 50);
+    ctx.fillStyle = "brown";
+    ctx.fillRect(1880, 100, 20, 300);
+    ctx.fillStyle = "white";
+    ctx.fillRect(1720, 100, 160, 140);
 }
